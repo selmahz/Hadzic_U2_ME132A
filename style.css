@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
     max-width: 700px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(102, 134, 124);
 }
 
@@ -11,8 +11,8 @@ h1 {
 
 #add-HPchar {
     display: grid;
-    grid-template-columns: 120px 120p 120px 120p 120p;
-    gap: 10px;
+    grid-template-columns: 103px 103px 103px 103px 103px 103px;
+    gap: 16px;
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid rgb(102, 134, 124);
@@ -21,9 +21,9 @@ h1 {
 #filters {
     display: grid;
     text-align: center;
-    grid-template-columns: 250px;
+    grid-template-columns: 103px 103px 103px;
     margin-bottom: 15px;
-    gap: 15px;
+    gap: 195px;
 }
 
 
@@ -31,14 +31,29 @@ h1 {
 #filter-by-gender {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4px;
+  gap: 5px;
 }
 
 
 #headers {
     padding: 10px 20px;
+    margin-top: 20px;
     border-bottom: 1px solid rgb(102, 134, 124);
     background: rgb(199, 223, 215);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
+
+button {
+    background-color: rgb(102, 134, 124);
+    color: rgb(174, 196, 188);
+    border: rgb(54, 71, 66) solid 1px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(208, 233, 225);
+    color: rgb(102, 134, 124);
+    border: 1px solid rgb(102, 134, 124);
+    cursor: pointer;
+}
