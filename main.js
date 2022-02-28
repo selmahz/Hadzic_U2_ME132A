@@ -46,7 +46,7 @@ function getCharactersByHouse(characters, house) {
 
 
 //return all characters based on gender
-function getCharactersByHouse(characters, gender) {
+function getCharactersByGender(characters, gender) {
     let charactersByGender = [];
 
     for (let character of characters) {
@@ -80,7 +80,7 @@ function renderCharacter(character) {
 
 //render array of characters into html
 function renderCharacters(characters) {
-    let charactersElement = document.getElementById("HPchar");
+    let charactersElement = document.getElementById("HPcharacters");
     charactersElement.innerHTML = "";
 
     for (let character of characters) {
@@ -109,12 +109,12 @@ function addCharacterSubmit(event) {
     addCharacterToData(database, character)
     renderCharacters(database);
 
-    let form = document.getElementById("add-HPchar");
+    let form = document.getElementById("addHPcharacters");
     form.reset();
 }
 
 function setAddCharacterHandler() {
-    let form = document.getElementById("add-HPchar");
+    let form = document.getElementById("addHPcharacters");
     form.addEventListener("submit", addCharacterSubmit);
 }
 

@@ -2,101 +2,101 @@
 
 let database = [
 
-{ Id: 1,
-    Name: "Harry Potter",
-    House: "Gryffindor",
-    Gender: "Male",
-    Patronum: "Stag",
-    Bloodstatus: "Half-blood"
+{ id: 1,
+    name: "Harry Potter",
+    house: "Gryffindor",
+    gender: "Male",
+    patronum: "Stag",
+    bloodstatus: "Half-blood"
 },
 
 
 {
-    Id: 2,
-    Name: "Hermione Granger",
-    House: "Gryffindor",
-    Gender: "Female",
-    Patronum: "Otter",
-    Bloodstatus: "Muggle-born"
+    id: 2,
+    name: "Hermione Granger",
+    house: "Gryffindor",
+    gender: "Female",
+    patronum: "Otter",
+    bloodstatus: "Muggle-born"
 },
 
 
 {
-    Id: 3,
-    Name: "Ron Weasley",
-    House: "Gryffindor",
-    Gender: "Male",
-    Patronum: "Jack Russell Terrier",
-    Bloodstatus: "Pure-blood",
+    id: 3,
+    name: "Ron Weasley",
+    house: "Gryffindor",
+    gender: "Male",
+    patronum: "Jack Russell Terrier",
+    bloodstatus: "Pure-blood",
 },
 
 
 { 
-    Id: 4, 
-    Name: "Luna Lovegood",
-    House: "Ravenclaw",
-    Gender: "Female",
-    Patronum: "Hare",
-    Bloodstatus: "Pure-blood"
+    id: 4, 
+    name: "Luna Lovegood",
+    house: "Ravenclaw",
+    gender: "Female",
+    patronum: "Hare",
+    bloodstatus: "Pure-blood"
 },
 
 
 { 
-    Id: 5,
-    Name: "Draco Malfoy",
-    House: "Slytherin",
-    Gender: "Male",
-    Patronum: "None",
-    Bloodstatus: "Pure-blood",
+    id: 5,
+    name: "Draco Malfoy",
+    house: "Slytherin",
+    gender: "Male",
+    patronum: "None",
+    bloodstatus: "Pure-blood",
 },
 
 { 
-    Id: 6, 
-    Name: "Sirius Black",
-    House: "Gryffindor",
-    Gender: "Male",
-    Patronum: "Non-corporeal",
-    Bloodstatus: "Pure-blood",
-},
-
-
-{ 
-    Id: 7,
-    Name: "Remus Lupin",
-    House: "Gryffindor",
-    Gender: "Male",
-    Patronnum: "Wolf",
-    Bloodstatus: "Half-blood",
+    id: 6, 
+    name: "Sirius Black",
+    house: "Gryffindor",
+    gender: "Male",
+    patronum: "Non-corporeal",
+    bloodstatus: "Pure-blood",
 },
 
 
 { 
-    Id: 8,
-    Name: "Severus Snape",
-    House: "Slytherin",
-    Gender: "Male",
-    Patronum: "Doe",
-    Bloodstatus: "Half-blood",
+    id: 7,
+    name: "Remus Lupin",
+    house: "Gryffindor",
+    gender: "Male",
+    patronnum: "Wolf",
+    bloodstatus: "Half-blood",
 },
 
 
 { 
-    Id: 9,
-    Name: "Tom Riddle / Voldemort",
-    House: "Slytherin",
-    Gender: "Male",
-    Patronum: "None",
-    Bloodstatus: "Half-blood",
+    id: 8,
+    name: "Severus Snape",
+    house: "Slytherin",
+    gender: "Male",
+    patronum: "Doe",
+    bloodstatus: "Half-blood",
 },
 
 
 { 
-    Id: 10,
-    Name: "Nymphadora Tonks",
-    House: "Hufflepuff",
-    Gender: "Female",
-    Patronum: "Jack Rabbit (pre-1995), wolf (1995-1998)",
-    Bloodstatus: "Half-blood",
+    id: 9,
+    name: "Tom Riddle / Voldemort",
+    house: "Slytherin",
+    gender: "Male",
+    patronum: "None",
+    bloodstatus: "Half-blood",
+},
+
+
+{ 
+    id: 10,
+    name: "Nymphadora Tonks",
+    house: "Hufflepuff",
+    gender: "Female",
+    patronum: "Rabbit (pre-1995), wolf (1995-1998)",
+    bloodstatus: "Half-blood",
 },
 
 ];
