@@ -1,0 +1,26 @@
+body {
+    margin: 0 auto;
+    max-width: 700px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#add {
+    margin-bottom: 20px;
+}
+
+#headers {
+    padding: 10px 10px;
+    border-bottom: 1px solid black;
+    background: beige;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#hpcharacters {
+    background: beige;
+    padding: 15px;
+}
