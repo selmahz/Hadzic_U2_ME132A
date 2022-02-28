@@ -9,26 +9,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
-
 <body>
-    <h1>Harry Potter Characters</h1>
+    <h1>Harry Pottor Characters</h1>
 
-    <button id="add" type="button">Add new character</button>
+    <form id="add-HPchar">
+        <input id="name" type="text" placeholder="Name">
+        <input id="house" type="text" placeholder="House">
+        <input id="gender" type="text" placeholder="Gender">
+        <input id="patronum" type="text" placeholder="Patronum">
+        <input id="bloodstatus" type="text" placeholder="Bloodstatus">
+
+        <button>Add</button>
+    </form>
+
+    <br>
+    <br>
+
+    <div id="filters">
+        <form id="filter-by-house">
+            <input id="filter-house" type="text" placeholder="Filter by house">
+            <button>Filter</button>
+        </form>
+
+
+        <form id="filter-by-gender">
+            <input id="filter-gender" type="text" placeholder="Filter by gender">
+            <button>Filter</button>
+        </form>
+
+        <button id="show-all" type="button">Show all</button>
+    </div>
+
 
     <div id="headers">
         <div>Name</div>
         <div>House</div>
+        <div>Gender</div>
         <div>Patronum</div>
         <div>Bloodstatus</div>
     </div>
 
-    <div id="hpcharacters"></div>
+    <div id="HPchar"></div>
 
     <script src="database.js"></script>
     <script src="main.js"></script>
+
 </body>
-
-
-
 </html>

@@ -2,25 +2,43 @@ body {
     margin: 0 auto;
     max-width: 700px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(102, 134, 124);
 }
 
 h1 {
     text-align: center;
 }
 
-#add {
-    margin-bottom: 20px;
+#add-HPchar {
+    display: grid;
+    grid-template-columns: 120px 120p 120px 120p 120p;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(102, 134, 124);
 }
+
+#filters {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 250px;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+
+#filter-by-house,
+#filter-by-gender {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
 
 #headers {
-    padding: 10px 10px;
-    border-bottom: 1px solid black;
-    background: beige;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(102, 134, 124);
+    background: rgb(199, 223, 215);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-}
-
-#hpcharacters {
-    background: beige;
-    padding: 15px;
-}
+  }
