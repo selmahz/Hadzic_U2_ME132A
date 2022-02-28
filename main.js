@@ -15,18 +15,18 @@ function createNewChar (name, house, gender, patronum, bloodstatus) {
 
 
 //add new character to database
-function addCharToData (characterList, character) { 
-    characterList.push(character); 
+function addCharToData (database, character) { 
+    database.push(character); 
 }
 
 
 //removes character based on name (hantera character listan och ta bort id)
-function removeCharById (characterList, Id) {
-    for (let i = 0; i < characterList.lenght; i++) {
-    let character = characterList[i];
+function removeCharById(characters, id) {
+    for (let i = 0; i < characters.lenght; i++) {
+    let character = characters[i];
 
     if (character.id == id) {
-        characterList.splice(i, 1);
+        characters.splice(i, 1);
         return;
        }
     }
@@ -34,10 +34,10 @@ function removeCharById (characterList, Id) {
 
 
 //return all characters based on house
-function getCharByHouse (characterList, house) {
+function getCharByHouse (database, house) {
     let charByHouse = [];
 
-    for (let character of characterList) {
+    for (let character of characters) {
         if (character.house.toLowerCase() == house.toLowerCase()) {
             charByHouse.push(character);
         }
@@ -48,10 +48,10 @@ function getCharByHouse (characterList, house) {
 
 
 //return all characters based on gender
-function getCharByGender (characterList, gender) {
+function getCharByGender (database, gender) {
     let charByGender = [];
 
-    for (let character of characterList) {
+    for (let character of characters) {
         if (character.gender.toLowerCase() == gender.toLowerCase()) {
             charByGender.push(character);
         }
@@ -62,10 +62,10 @@ function getCharByGender (characterList, gender) {
 
 
 //return all characters based on patronum 
-function getCharByPatronum (characterList, patronum) {
+function getCharByPatronum (database, patronum) {
     let charByPatronum = [];
 
-    for (let character of characterList) {
+    for (let character of characters) {
         if (character.patronum.toLowerCase() == patronum.toLowerCase()) {
             charByPatronum.push(character);
         }
@@ -79,7 +79,7 @@ function getCharByPatronum (characterList, patronum) {
 function getCharByBlood (characterList, bloodstatus) {
     let charByBlood = [];
 
-    for (let character of characterList) {
+    for (let character of database) {
         if (character.bloodstatus.toLowerCase() == bloodstatus.toLowerCase()) {
             charByBlood.push(character);
         }
@@ -109,12 +109,12 @@ function renderCharacter (character) {
 
 
 //render array of character into html 
-function renderCharacters(characterList) {
+function renderCharacters(database) {
     let charactersElement = document.getElementById("HPchar");
     charactersElement.innerHTML = "";
 
     //go through alla characters and unsert html
-    for (let character of characterList) {
+    for (let character of database) {
         let characterElement = renderCharacter(character);
         charactersElement.appendChild(characterElement);
     }
@@ -137,10 +137,10 @@ function onAddCharacterSubmit(event) {
     let character = createNewChar(name, house, gender, patronum, bloodstatus);
 
     //calculate new id 
-    character.id = characterList[characterList.lenght - 1].id + 1;
+    character.id = database[database.lenght - 1].id + 1;
 
-    addCharToData(characterList, character);
-    renderCharacters(characterList);
+    addCharToData(database, character);
+    renderCharacters(database);
 
     //reset all fields in form 
     let form = document.getElementById("add-HPchar");
@@ -158,8 +158,8 @@ function setAddCharacterHandler() {
 function onRemoveCharacterClick (event) {
     let button = event.target;
     let id = button.parentElement.id;
-    removeCharById (characterList, id);
-    renderCharacters (characterList);
+    removeCharById (database, id);
+    renderCharacters (database);
 }
 
 
@@ -179,7 +179,7 @@ function filterByHouseSubmit (event) {
     //what house?
     let house = document.getElementById("filter-house").value;
     //get by house
-    let characters = getCharByHouse(characterList, house);
+    let characters = getCharByHouse(database, house);
     //re-render
     renderCharacters(characters);
 }
@@ -192,8 +192,33 @@ function filterByGenderubmit (event) {
     //what house?
     let gender = document.getElementById("gender-house").value;
     //get by house
-    let characters = getCharByHouse(characterList, gender);
+    let characters = getCharByHouse(database, gender);
     //re-render
     renderCharacters(characters);
 }
 
+
+//show all click
+function showAllClick() {
+    document.getElementById("filter-house").value = "";
+    document.getElementById("filter-gender").value = "";
+
+    renderCharacters(database);
+}
+
+//set filter
+function setFilterHandlers() {
+    let houseForm = document.getElementById("filter-by-house");
+    let genderForm = document.getElementById("filter-by-gender");
+    let showAll = document.getElementById("show-all");
+
+    houseForm.addEventListener("submit", filterByGenderubmit);
+    genderForm.addEventListener("submit", filterByGenderubmit);
+    showAll.addEventListener("click", showAllClick);
+}
+
+
+//adjust the page 
+renderCharacters(database);
+setAddCharacterHandler();
+setFilterHandlers();

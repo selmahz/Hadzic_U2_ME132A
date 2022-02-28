@@ -1,6 +1,6 @@
 //harry potter characters database//
 
-let hpCharList = [
+let database = [
 
 { Id: 1,
     Name: "Harry Potter",
