@@ -65,7 +65,7 @@ let database = [
     name: "Remus Lupin",
     house: "Gryffindor",
     gender: "Male",
-    patronnum: "Wolf",
+    patronum: "Wolf",
     bloodstatus: "Half-blood",
 },
 

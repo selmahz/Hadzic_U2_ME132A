@@ -15,7 +15,12 @@ function createNewCharacter(name, house, gender, patronum, bloodstatus) {
 
 //add new dog to database 
 function addCharacterToData(database, character) {
-    database.push(character);
+    let wantToSaveCharacter = confirm(`Are you sure you want to add ${character.name} to the list?`);
+
+    if (wantToSaveCharacter) { 
+        database.push(character);
+    }
+
 }
 
 
@@ -23,9 +28,14 @@ function addCharacterToData(database, character) {
 function removeCharacterById(characters, id) {
     for (let i = 0; i < characters.length; i++) {
         let character = characters[i];
+
         if (character.id == id) {
-            characters.splice(i, 1);
-            return;
+            let confirmCharacter = confirm(`Are you sure you want to remove ${character.name}?`);
+
+            if (confirmCharacter) { 
+                characters.splice(i, 1); //måste gå igenom alla karaktärer och efter DET ska det splica, confirm rutan måste ju komma innan den tar bort karaktär 
+                return;
+            }
         }
     }
 }
@@ -125,7 +135,7 @@ function removeCharacterClick(event) {
 
     removeCharacterById(database, id);
     renderCharacters(database);
-}
+ }
 
 
 //add click event handler to all remove-buttons
