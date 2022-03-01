@@ -12,13 +12,19 @@ h1 {
   text-shadow: 10px 5px 5px #4e0a0a42;
 }
 
+h3 {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Homemade Apple', cursive;
+  color: #7f0909;
+  text-shadow: 10px 5px 5px #4e0a0a42;
+}
+
 #addHPcharacters {
   display: grid;
   grid-template-columns: 150px 150px 150px 150px 150px 150px;
   gap: 20px;
   margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #7f0909;
 }
 
 #filters {
@@ -27,7 +33,9 @@ h1 {
   justify-content: center;
   grid-template-columns: 150px 150px 150px;
   margin-bottom: 15px;
+  padding-bottom: 20px;
   gap: 150px;
+  border-bottom: 1px solid #7f0909;
 }
 
 #filter-by-house,
