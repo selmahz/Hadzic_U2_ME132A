@@ -104,31 +104,31 @@ function addCharacterSubmit(event) {
 
     let name = document.getElementById("name").value;
         if (name == "") {
-            alert("Name of character must be filled out");
+            alert("Fill in all the information, please");
             return false;
         }
 
     let house = document.getElementById("house").value;
         if (house == "") {
-            alert("House of character must be filled out");
+            alert("Fill in all the information, please");
             return false;
     }
 
     let gender = document.getElementById("gender").value;
         if (gender == "") {
-             alert("Gender of character must be filled out");
+             alert("Fill in all the information, please");
             return false;
     }   
 
     let patronum = document.getElementById("patronum").value;
     if (patronum == "") {
-        alert("Patronum of character must be filled out");
+        alert("Fill in all the information, please");
         return false;
     }
 
     let bloodstatus = document.getElementById("bloodstatus").value;
     if (bloodstatus == "") {
-        alert("Bloodstatus of character must be filled out");
+        alert("Fill in all the information, please");
         return false;
     }
 
