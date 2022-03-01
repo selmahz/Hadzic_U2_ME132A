@@ -21,6 +21,7 @@ h1 {
     border-bottom: 1px solid #7f0909;
 }
 
+
 #filters {
     display: grid;
     text-align: center;
@@ -73,7 +74,8 @@ button:hover {
 
 
 .character {
-    padding: 10px 10px;
+    padding: 20px;
+    margin-left: -40px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     font-size: 13px;
