@@ -15,12 +15,8 @@ function createNewCharacter(name, house, gender, patronum, bloodstatus) {
 
 //add new dog to database 
 function addCharacterToData(database, character) {
-    let wantToSaveCharacter = confirm(`Are you sure you want to add ${character.name} to the list?`);
 
-    if (wantToSaveCharacter) { 
         database.push(character);
-    }
-
 }
 
 
@@ -107,10 +103,34 @@ function addCharacterSubmit(event) {
     event.preventDefault();
 
     let name = document.getElementById("name").value;
+        if (name == "") {
+            alert("Name of character must be filled out");
+            return false;
+        }
+
     let house = document.getElementById("house").value;
+        if (house == "") {
+            alert("House of character must be filled out");
+            return false;
+    }
+
     let gender = document.getElementById("gender").value;
+        if (gender == "") {
+             alert("Gender of character must be filled out");
+            return false;
+    }   
+
     let patronum = document.getElementById("patronum").value;
+    if (patronum == "") {
+        alert("Patronum of character must be filled out");
+        return false;
+    }
+
     let bloodstatus = document.getElementById("bloodstatus").value;
+    if (bloodstatus == "") {
+        alert("Bloodstatus of character must be filled out");
+        return false;
+    }
 
     let character = createNewCharacter(name, house, gender, patronum, bloodstatus);
 
