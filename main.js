@@ -193,7 +193,7 @@ function setFilterCharacterHandlers () {
   showAll.addEventListener('click', onShowAllClick)
 }
 
-//adjust the page
+//call
 renderCharacters(database)
 setAddCharacterHandler()
 setFilterCharacterHandlers()

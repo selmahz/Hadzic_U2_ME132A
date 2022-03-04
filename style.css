@@ -4,20 +4,17 @@ body {
   height: 100vh;
 }
 
-h1 {
+h1,
+h3 {
   text-align: center;
   font-size: 70px;
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Homemade Apple';
   color: #7f0909;
   text-shadow: 10px 5px 5px #4e0a0a42;
 }
 
 h3 {
-  text-align: center;
   font-size: 15px;
-  font-family: 'Homemade Apple', cursive;
-  color: #7f0909;
-  text-shadow: 10px 5px 5px #4e0a0a42;
 }
 
 #addHPcharacters {
@@ -48,10 +45,9 @@ h3 {
 #headers {
   padding: 10px;
   margin-top: 20px;
-  border-bottom: 1px solid rgb(102, 134, 124);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Homemade Apple';
   background-color: #7f0909;
   color: #ffc500;
 }
@@ -77,7 +73,8 @@ button:hover {
 }
 
 .character {
-  padding: 20px;
+  align-items: center;
+  padding: 25px;
   margin-left: -40px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -87,19 +84,6 @@ button:hover {
   border: 0.5px solid #7f0909;
 }
 
-.character div {
-  display: flex;
-  align-items: center;
-}
-
-.character:nth-child(odd) {
-  background: white;
-}
-
-.character:nth-child(even) {
-  background-color: white;
-}
-
 .character button {
-  height: 20px;
+  height: 25px;
 }
